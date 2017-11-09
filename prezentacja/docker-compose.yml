@@ -1,0 +1,12 @@
+version: '3'
+services:
+  prezentacja:
+    image: "wemstar/prezentacja:1.0"
+    ports:
+      - "8899:8080"
+  prezentacja-proxy:
+    image: "wemstar/prezentacja-proxy"
+    ports:
+      - "8889:8080"
+    links:
+      - prezentacja
